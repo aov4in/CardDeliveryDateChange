@@ -28,58 +28,6 @@ public class CardDeliveryDateChangeTest {
         open("http://localhost:9999");
     }
 
-//    @Test
-//    void shouldTestHappyPathWithFaker() {
-//        String firstMeeting = getCorrectDate(23);
-////        int secondMeeting = DataGenerator.Registration.generateRandomNumber(firstMeeting+1,firstMeeting+180);
-//        $("[data-test-id='city'] input").setValue(getRandomCity());
-//        $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.BACK_SPACE);
-//        $("[placeholder='Дата встречи']").setValue(DataGenerator.getCorrectDate(23));
-//        $("[data-test-id='name'] input").setValue(DataGenerator.getRandomName());
-//        $("[data-test-id='phone'] input").setValue(DataGenerator.getRandomPhone());
-//        $("[data-test-id=agreement] .checkbox__box").click();
-//        $(withText("Запланировать")).click();
-//        $("[data-test-id='success-notification']").shouldBe(visible, ofSeconds(15));
-//        $("[data-test-id='success-notification']>.notification__content")
-//                .shouldHave(text("Встреча успешно запланирована на " + DataGenerator.getRandomName()));
-//        $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.BACK_SPACE);
-//        $("[placeholder='Дата встречи']").setValue(DataGenerator.getCorrectDate(5));
-//        $(withText("Запланировать")).click();
-//        $("[data-test-id='replan-notification']").shouldBe(visible);
-//        $("[data-test-id='replan-notification']>.notification__content")
-//                .shouldHave(text("У вас уже запланирована встреча на другую дату. Перепланировать?"));
-//        $(withText("Перепланировать")).click();
-//        $("[data-test-id='success-notification']>.notification__content").shouldBe(visible)
-//                .shouldHave(exactText("Встреча успешно запланирована на " + DataGenerator.getCorrectDate(5)));
-//    }
-
-//    @Test
-//    void shouldTestCardDelivery(){
-//        open("http://localhost:9999");
-//        $("[data-test-id=city] input").setValue("Екатеринбург");
-//        $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.BACK_SPACE);
-//        $("[placeholder='Дата встречи']").setValue(DataGenerator.getCorrectDate(23));
-//        $("[data-test-id=name] input").setValue("Андреев Андрей");
-//        $("[data-test-id=phone] input").setValue("+12345678911");
-//        $(Selectors.byClassName("checkbox__box")).click();
-//        $(withText("Запланировать")).click();
-//        Configuration.timeout = 11000;
-//        $("[data-test-id='success-notification']").shouldBe(Condition.visible);
-//        $("[data-test-id='success-notification']>.notification__content")
-//                .shouldHave(text("Встреча успешно запланирована на "));
-//        Configuration.timeout = 11000;
-//        $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.BACK_SPACE);
-//        $("[placeholder='Дата встречи']").setValue(DataGenerator.getCorrectDate(5));
-//        $(withText("Запланировать")).click();
-//        Configuration.timeout = 11000;
-//        $("[data-test-id='replan-notification']").shouldBe(visible);
-//        $("[data-test-id='replan-notification']>.notification__content")
-//                .shouldHave(text("У вас уже запланирована встреча на другую дату. Перепланировать?"));
-//        $(withText("Перепланировать")).click();
-//        $("[data-test-id='success-notification']>.notification__content").shouldBe(visible)
-//                .shouldHave(exactText("Встреча успешно запланирована на " + DataGenerator.getCorrectDate(5)));
-//    }
-
     @Test
     void shouldTestAnotherDate() {
         $("[data-test-id='city'] input").setValue(city);
