@@ -1,16 +1,13 @@
 package ru.netology.test;
 
 import com.github.javafaker.Faker;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-@Data
-@RequiredArgsConstructor
 public class DataGenerator {
+
+    private DataGenerator(){}
 
     public static Faker faker = new Faker(new Locale("ru"));
 
@@ -34,10 +31,10 @@ public class DataGenerator {
         return dateOfDelivery;
     }
 
-//    public static String getNotCorrectDate() {
-//        String notCorrectDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-//        return notCorrectDate;
-//    }
+    public static String getNotCorrectDate() {
+        String notCorrectDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        return notCorrectDate;
+    }
 
     public static String getRandomName() {
         String name = faker.name().lastName() + " " + faker.name().firstName();
