@@ -47,7 +47,9 @@ public class CardDeliveryDateChangeTest {
         $(withText("Запланировать")).click();
         $("[data-test-id='replan-notification']").shouldBe(visible, ofSeconds(11));
         $("[data-test-id='replan-notification']").shouldHave(text("У вас уже запланирована встреча на другую дату"));
-        $(withText("Перепланировать")).click();
+        $("[data-test-id='replan-notification'] .button").click();
+        $("[data-test-id='success-notification']").shouldBe(visible, ofSeconds(5));
+        $("[data-test-id='success-notification'] .notification__content").shouldHave(text("Встреча успешно запланирована на "+dateOfDeliveryAnother));
     }
 
     @Test
